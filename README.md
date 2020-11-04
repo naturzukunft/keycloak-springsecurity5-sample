@@ -49,6 +49,9 @@ Sample response:
     "client_secret_expires_at": 0
 }
 
+----------------------------------------
+Now the original documentation follows!
+----------------------------------------
 # keycloak-springsecurity5-sample
 
 Spring Security 5 brought new OAuth2/OIDC client instead of the legacy client support in the old Spring Security OAuth sub project. The new 
