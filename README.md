@@ -19,7 +19,7 @@ curl --location --request POST 'https://solidcommunity.net/register' \
 --header 'Content-Type: application/json' \  
 --data-raw '{  
 "application_type": "native",  
-"redirect_uris": ["http://localhost:8080/oidc_callback"],  
+"redirect_uris": ["http://localhost:8080/login/oauth2/code/solidcommunity"],  
 "client_name": "My Example App",  
 "subject_type": "pairwise"  
 }'  
