@@ -1,4 +1,5 @@
 # naturzukunft's fork
+## Keycloak
 I just added a new docker-compose configuration for keycloak. Start it with:  
 `.../keycloak-springsecurity5-sample/src/main/docker$ docker-compose -f keycloak.yml up`  
 
@@ -7,7 +8,11 @@ http://localhost:9080/auth/admin/master/console/#/realms/demo
 
 The user to use in the app is (user/user)
  
-## Register your new SOLID application
+## SOLID
+I managed it to integrate https://solidcommunity.net
+Therefore you have to dynamically register your client (see below).
+
+### Register your new SOLID application
 Initialy you have to do a 'Dynamic Client Registration' to get a client_id and a client_secret for you app:
 ```
 curl --location --request POST 'https://solidcommunity.net/register' \  
