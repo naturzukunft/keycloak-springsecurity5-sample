@@ -1,3 +1,13 @@
+# naturzukunft's fork
+I just added a new docker-compose configuration for keycloak. Start it witzh:  
+`.../keycloak-springsecurity5-sample/src/main/docker$ docker-compose -f keycloak.yml up`  
+
+Access the admin console (admin/admin):
+http://localhost:9080/auth/admin/master/console/#/realms/demo
+
+The user to use in the app is (user/user)
+ 
+
 # keycloak-springsecurity5-sample
 
 Spring Security 5 brought new OAuth2/OIDC client instead of the legacy client support in the old Spring Security OAuth sub project. The new 

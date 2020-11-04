@@ -53,8 +53,8 @@ spring:
             jwk-set-uri: https://dev-727816.oktapreview.com/oauth2/v1/keys
             user-name-attribute: sub
           keycloak:
-            authorization-uri: http://localhost:8000/auth/realms/demo/protocol/openid-connect/auth
-            token-uri: http://localhost:8000/auth/realms/demo/protocol/openid-connect/token
-            user-info-uri: http://localhost:8000/auth/realms/demo/protocol/openid-connect/userinfo
-            jwk-set-uri: http://localhost:8000/auth/realms/demo/protocol/openid-connect/certs
+            authorization-uri: http://localhost:9080/auth/realms/demo/protocol/openid-connect/auth
+            token-uri: http://localhost:9080/auth/realms/demo/protocol/openid-connect/token
+            user-info-uri: http://localhost:9080/auth/realms/demo/protocol/openid-connect/userinfo
+            jwk-set-uri: http://localhost:9080/auth/realms/demo/protocol/openid-connect/certs
             user-name-attribute: preferred_username
