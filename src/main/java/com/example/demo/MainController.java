@@ -6,10 +6,12 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.oauth2.client.OAuth2AuthorizedClient;
 import org.springframework.security.oauth2.client.OAuth2AuthorizedClientService;
 import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken;
 import org.springframework.security.oauth2.core.user.OAuth2User;
+import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
@@ -36,8 +38,12 @@ public class MainController {
 
 
 	@GetMapping("/userinfo")
-    public String userinfo(Model model, OAuth2AuthenticationToken authentication) {
+    public String userinfo(Model model, OAuth2AuthenticationToken authentication, @AuthenticationPrincipal Jwt principal) {
         OAuth2AuthorizedClient authorizedClient = this.getAuthorizedClient(authentication);
+        System.out.println("scopes: " + authorizedClient.getAccessToken().getScopes());
+        System.out.println("ExpiresAt: " + authorizedClient.getAccessToken().getExpiresAt());
+        System.out.println("TokenType: " + authorizedClient.getAccessToken().getTokenType());
+        System.out.println("TokenValue: " + authorizedClient.getAccessToken().getTokenValue());
         Map userAttributes = Collections.emptyMap();
         String userInfoEndpointUri = authorizedClient.getClientRegistration()
             .getProviderDetails().getUserInfoEndpoint().getUri();
