@@ -1,5 +1,5 @@
 # naturzukunft's fork
-I just added a new docker-compose configuration for keycloak. Start it witzh:  
+I just added a new docker-compose configuration for keycloak. Start it with:  
 `.../keycloak-springsecurity5-sample/src/main/docker$ docker-compose -f keycloak.yml up`  
 
 Access the admin console (admin/admin):
