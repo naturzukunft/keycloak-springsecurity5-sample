@@ -28,7 +28,7 @@ Sample response:
 ```  
 {  
     "redirect_uris": [  
-        "http://localhost:8080/oidc_callback"  
+        "http://localhost:8080/login/oauth2/code/solidcommunity"  
     ],  
     "client_id": "c3514904fe7xxxxxxxxxxxxxx",  
     "client_secret": "57bcefefdd500e35xxxxxxxxxxx",  
