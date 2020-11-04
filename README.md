@@ -7,6 +7,42 @@ http://localhost:9080/auth/admin/master/console/#/realms/demo
 
 The user to use in the app is (user/user)
  
+## Register your new SOLID application
+Initialy you have to do a 'Dynamic Client Registration' to get a client_id and a client_secret for you app:
+```
+curl --location --request POST 'https://solidcommunity.net/register' \  
+--header 'Content-Type: application/json' \  
+--data-raw '{  
+"application_type": "native",  
+"redirect_uris": ["http://localhost:8080/oidc_callback"],  
+"client_name": "My Example App",  
+"subject_type": "pairwise"  
+}'  
+```
+Sample response:  
+```  
+{  
+    "redirect_uris": [  
+        "http://localhost:8080/oidc_callback"  
+    ],  
+    "client_id": "c3514904fe7xxxxxxxxxxxxxx",  
+    "client_secret": "57bcefefdd500e35xxxxxxxxxxx",  
+    "response_types": [  
+        "code"  
+    ],
+    "grant_types": [
+        "authorization_code"
+    ],
+    "application_type": "native",
+    "client_name": "My Example App",
+    "subject_type": "pairwise",
+    "id_token_signed_response_alg": "RS256",
+    "token_endpoint_auth_method": "client_secret_basic",
+    "registration_access_token": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "registration_client_uri": "https://solidcommunity.net/register/c3514904fxxxxxxxxxxxxxxxxxxxxxxx",
+    "client_id_issued_at": 1603564032,
+    "client_secret_expires_at": 0
+}
 
 # keycloak-springsecurity5-sample
 

@@ -44,6 +44,16 @@ spring:
               - openid
               - profile
               - email
+          solidcommunity:
+            client-id: <yourClientId>
+            client-secret: <yourSecret>
+            clientName: solidcommunity
+            authorization-grant-type: authorization_code
+            redirectUriTemplate: '{baseUrl}/login/oauth2/code/{registrationId}'
+            scope:
+              - openid
+              - profile
+              - email
 
         provider:
           okta:
@@ -58,3 +68,7 @@ spring:
             user-info-uri: http://localhost:9080/auth/realms/demo/protocol/openid-connect/userinfo
             jwk-set-uri: http://localhost:9080/auth/realms/demo/protocol/openid-connect/certs
             user-name-attribute: preferred_username
+          solidcommunity:          
+            authorization-uri: https://solidcommunity.net/authorize
+            token-uri: https://solidcommunity.net/token
+            jwk-set-uri: https://solidcommunity.net/jwks
